@@ -59,7 +59,7 @@ h2{
 }
 
 .progress-bar::before{
-    content: "0%";
+    content: "80%";
     position: absolute;
     left: 0;
     font-size: 12px;
