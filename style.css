@@ -92,6 +92,13 @@ h2{
     }
 }
 
+.rednote-icons {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+
 .sm a{
     display: inline-block;
     width: 60px;
