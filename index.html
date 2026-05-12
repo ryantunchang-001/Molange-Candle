@@ -11,7 +11,10 @@
 <body>
     <div class="container">
         <div class="bg">
-            <video src="Tatch/welcome.mp4" autoplay loop></video>
+            <video id="myVideo" src="Tatch/welcome.mp4" muted autoplay loop playsinline></video>
+            <button id="muteBtn" onclick="toggleMute()" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer;">
+            <i id="muteIcon" class="fas fa-volume-mute"></i>
+            </button>
         </div>
         <h1>Coming Soon</h1>
         <h3>Molange Candle</h3>
@@ -23,5 +26,21 @@
             <a href="https://www.xiaohongshu.com/user/profile/6340474a0000000012026675?xsec_token=YBMDlORVLcKrHnny6lfMTpcsnvmjd0AAMTZ7PtT5kCA-4=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODk2MDc8OEo2NzUyOTgwNjc1OTk6Oz0-&apptime=1776173897&share_id=b55ef5891ac0480c9a4e50f41e1ffcc9"><img src="Tatch/rednote-icons.png" class="rednote-icons"></a>
         </div>
     </div>
+    <script>
+    function toggleMute() {
+    var video = document.getElementById("myVideo");
+    var icon = document.getElementById("muteIcon");
+
+    if (video.muted) {
+        video.muted = false; // 取消静音
+        icon.classList.remove("fa-volume-mute");
+        icon.classList.add("fa-volume-up"); // 变成有声音的图标
+    } else {
+        video.muted = true; // 设为静音
+        icon.classList.remove("fa-volume-up");
+        icon.classList.add("fa-volume-mute"); // 变成静音图标
+    }
+    }
+    </script>
 </body>
 </html>
